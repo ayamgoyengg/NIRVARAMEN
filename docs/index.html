@@ -3,111 +3,181 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nirvaramen</title>
+    <title>Nirvaramen - Authentic Japanese Ramen</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Playfair+Display:wght@700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
         
         body {
             font-family: 'Poppins', sans-serif;
-            background: linear-gradient(to bottom, #f5e4c3, #f8f1e1);
         }
-
-        h1, h3 {
-            font-family: 'Playfair Display', serif;
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, #ff4d4d 0%, #ff1a1a 100%);
+        }
+        
+        .menu-item:hover img {
+            transform: scale(1.05);
+            transition: transform 0.3s ease;
+        }
+        
+        .testimonial-card {
+            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.95);
         }
     </style>
 </head>
-<body class="bg-white text-gray-900">
-    <header class="bg-red-600 text-white fixed w-full z-10 shadow-md">
+<body>
+    <!-- Header/Navigation -->
+    <header class="fixed w-full z-50 bg-white shadow-md">
         <nav class="container mx-auto px-4 py-4">
             <div class="flex justify-between items-center">
-                <a href="#" class="text-2xl font-bold">🍜 NIRVARAMEN</a>
-                <div class="hidden md:flex space-x-6">
-                    <a href="#" class="hover:text-yellow-400">Home</a>
-                    <a href="#" class="hover:text-yellow-400">Shop</a>
-                    <a href="#" class="hover:text-yellow-400">About</a>
-                    <a href="#" class="hover:text-yellow-400">Contact</a>
+                <a href="#" class="text-2xl font-bold text-red-600">
+                    🍜 NIRVARAMEN
+                </a>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="text-gray-700 hover:text-red-600 transition">Home</a>
+                    <a href="#menu" class="text-gray-700 hover:text-red-600 transition">Menu</a>
+                    <a href="#about" class="text-gray-700 hover:text-red-600 transition">About</a>
+                    <a href="#contact" class="text-gray-700 hover:text-red-600 transition">Contact</a>
                 </div>
-                <div class="flex items-center space-x-4">
-                    <a href="#" class="hover:text-yellow-400"><i class="fas fa-search"></i></a>
-                    <a href="#" class="hover:text-yellow-400"><i class="fas fa-user"></i></a>
-                    <a href="#" class="hover:text-yellow-400"><i class="fas fa-shopping-cart"></i></a>
-                </div>
+                <button class="bg-red-600 text-white px-6 py-2 rounded-full hover:bg-red-700 transition">
+                    Order Now
+                </button>
             </div>
         </nav>
     </header>
 
-    <main class="pt-24">
-        <section class="container mx-auto px-4 py-8">
-            <h1 class="text-4xl font-bold text-center text-red-700 mb-12">Frozen Ramen Kits</h1>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="group hover:shadow-lg transition-shadow duration-300">
-                    <div class="overflow-hidden rounded-lg bg-yellow-100">
-                        <img src="./assets/ramen.png" alt="Tonkotsu Ramen Kit" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300">
+    <!-- Hero Section -->
+    <section id="home" class="hero-gradient pt-24">
+        <div class="container mx-auto px-4 py-16 md:py-24">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 text-white">
+                    <h1 class="text-4xl md:text-6xl font-bold mb-6">
+                        Authentic Frozen Japanese Ramen
+                    </h1>
+                    <p class="text-lg mb-8 text-gray-100">
+                        Experience the true taste of Japan with our carefully crafted ramen bowls, made with premium ingredients and traditional recipes.
+                    </p>
+                    <div class="flex space-x-4">
+                        <button class="bg-white text-red-600 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition">
+                            View Menu
+                        </button>
+                        <button class="border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-red-600 transition">
+                            Book Table
+                        </button>
                     </div>
-                    <h3 class="mt-4 text-lg font-semibold text-gray-800">Tonkotsu Ramen Kit</h3>
-                    <p class="mt-1 text-xl font-medium text-red-600">Rp 120.000</p>
-                    <button class="mt-2 w-full bg-red-600 text-white py-2 px-4 rounded-lg hover:bg-red-700 transition duration-300">Add to Cart</button>
                 </div>
-
-                <div class="group hover:shadow-lg transition-shadow duration-300">
-                    <div class="overflow-hidden rounded-lg bg-yellow-100">
-                        <img src="./assets/ramen.png" alt="Miso Ramen Kit" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300">
-                    </div>
-                    <h3 class="mt-4 text-lg font-semibold text-gray-800">Miso Ramen Kit</h3>
-                    <p class="mt-1 text-xl font-medium text-red-600">Rp 110.000</p>
-                    <button class="mt-2 w-full bg-red-600 text-white py-2 px-4 rounded-lg hover:bg-red-700 transition duration-300">Add to Cart</button>
-                </div>
-
-                <div class="group hover:shadow-lg transition-shadow duration-300">
-                    <div class="overflow-hidden rounded-lg bg-yellow-100">
-                        <img src="./assets/ramen.png" alt="Shoyu Ramen Kit" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300">
-                    </div>
-                    <h3 class="mt-4 text-lg font-semibold text-gray-800">Shoyu Ramen Kit</h3>
-                    <p class="mt-1 text-xl font-medium text-red-600">Rp 100.000</p>
-                    <button class="mt-2 w-full bg-red-600 text-white py-2 px-4 rounded-lg hover:bg-red-700 transition duration-300">Add to Cart</button>
+                <div class="md:w-1/2 mt-12 md:mt-0">
+                    <img src="./assets/ramen.jpeg" alt="Delicious Ramen Bowl" class="rounded-lg shadow-2xl">
                 </div>
             </div>
-        </section>
-    </main>
+        </div>
+    </section>
 
-    <footer class="bg-gray-800 text-white mt-12">
-        <div class="container mx-auto px-4 py-8">
+    <!-- Featured Menu -->
+    <section id="menu" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Our Signature Ramen</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="menu-item bg-white rounded-xl shadow-lg overflow-hidden">
+                    <img src="./assets/download.jpeg" alt="Tonkotsu Ramen" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Tonkotsu Ramen</h3>
+                        <p class="text-gray-600 mb-4">Rich pork bone broth with tender chashu, ajitsuke tamago, and fresh noodles</p>
+                        <p class="text-xl font-bold text-red-600 mb-4">Rp 120.000</p>
+                        <button class="w-full bg-red-600 text-white py-2 rounded-lg hover:bg-red-700 transition">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <div class="menu-item bg-white rounded-xl shadow-lg overflow-hidden">
+                    <img src="./assets/ramen.jpeg" alt="Miso Ramen" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Miso Ramen</h3>
+                        <p class="text-gray-600 mb-4">Savory miso broth with corn, butter, and signature toppings</p>
+                        <p class="text-xl font-bold text-red-600 mb-4">Rp 110.000</p>
+                        <button class="w-full bg-red-600 text-white py-2 rounded-lg hover:bg-red-700 transition">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <div class="menu-item bg-white rounded-xl shadow-lg overflow-hidden">
+                    <img src="./assets/ramen.png" alt="Spicy Ramen" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Spicy Ramen</h3>
+                        <p class="text-gray-600 mb-4">Fiery spicy broth with minced pork, bamboo shoots, and seasoned egg</p>
+                        <p class="text-xl font-bold text-red-600 mb-4">Rp 115.000</p>
+                        <button class="w-full bg-red-600 text-white py-2 rounded-lg hover:bg-red-700 transition">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                <div class="p-6">
+                    <i class="fas fa-utensils text-4xl text-red-600 mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">Fresh Ingredients</h3>
+                    <p class="text-gray-600">We use only the finest and freshest ingredients for our ramen</p>
+                </div>
+                <div class="p-6">
+                    <i class="fas fa-shipping-fast text-4xl text-red-600 mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">Fast Delivery</h3>
+                    <p class="text-gray-600">Quick delivery to your doorstep while maintaining quality</p>
+                </div>
+                <div class="p-6">
+                    <i class="fas fa-heart text-4xl text-red-600 mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">Made with Love</h3>
+                    <p class="text-gray-600">Every bowl is crafted with passion and dedication</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
                 <div>
-                    <h3 class="font-bold text-lg mb-4">Quick Links</h3>
+                    <h3 class="text-xl font-bold mb-4">NIRVARAMEN</h3>
+                    <p class="text-gray-400">Authentic Frozen Japanese ramen delivered to your doorstep</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
                     <ul class="space-y-2">
-                        <li><a href="#" class="hover:text-yellow-400">Home</a></li>
-                        <li><a href="#" class="hover:text-yellow-400">Shop</a></li>
-                        <li><a href="#" class="hover:text-yellow-400">About</a></li>
-                        <li><a href="#" class="hover:text-yellow-400">Contact</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Home</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Menu</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">About</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Contact</a></li>
                     </ul>
                 </div>
                 <div>
-                    <h3 class="font-bold text-lg mb-4">Customer Service</h3>
+                    <h4 class="text-lg font-semibold mb-4">Contact</h4>
                     <ul class="space-y-2">
-                        <li><a href="#" class="hover:text-yellow-400">FAQs</a></li>
-                        <li><a href="#" class="hover:text-yellow-400">Shipping</a></li>
-                        <li><a href="#" class="hover:text-yellow-400">Returns</a></li>
+                        <li class="text-gray-400">📍 Jakarta, Indonesia</li>
+                        <li class="text-gray-400">📱 +62 123-456-7890</li>
+                        <li class="text-gray-400">✉️ info@nirvaramen.com</li>
                     </ul>
                 </div>
                 <div>
-                    <h3 class="font-bold text-lg mb-4">Contact Us</h3>
-                    <p>Email: info@nirvaramen.com</p>
-                    <p>Phone: (123) 456-7890</p>
-                </div>
-                <div>
-                    <h3 class="font-bold text-lg mb-4">Follow Us</h3>
+                    <h4 class="text-lg font-semibold mb-4">Follow Us</h4>
                     <div class="flex space-x-4">
-                        <a href="#" class="hover:text-yellow-400"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="hover:text-yellow-400"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="hover:text-yellow-400"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-instagram text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-facebook text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-twitter text-xl"></i></a>
                     </div>
                 </div>
             </div>
-            <div class="mt-8 border-t border-gray-600 pt-4 text-center">
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
                 <p>&copy; 2024 Nirvaramen. All rights reserved.</p>
             </div>
         </div>
